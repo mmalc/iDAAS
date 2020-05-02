@@ -1,5 +1,5 @@
 # iDAAS
-The iDAAS Platform central code repository. It is designed to be a launch point to all the specific components and artifacts that make iDAAS an extensible platform
+The iDAAS Platform central code repository. It is designed to be a launch point to all the specific components and artifacts that make iDAAS an extensible platform.
 
 # Background
 For decades across the various markets within healthcare (clinical, financial, pharmacy and life sciences) integration has been a challenge for many differnt reasons. Within Red Hat there is a specific industry team dedicated to ensuring Red Hat's technologies meet the industry needs and ensuring its customers have meaningful platforms that demonstrate these capabilities. The Red Hat healthcare team, has had a specific interest in enabling and empowering healthcare organizations to transform their integration efforts while also introducing and infusing Red Hat's open organization, open source mindset and community based culture as well. As the Red Hat healthcare team started this journey they also wanted to ensure they could help showcase integration as an innovation enabler and helping simplify IT.
@@ -52,15 +52,17 @@ Here are the technologies that drive the capabilities:
 Connected Health/iDAAS overall objective is to simplify data integration and interoperability needs. By establishing a platform initally this enabled the team to focus on the overall industry needs and work through them and establish capabilities for each. As the capabilities were worked through components have been developed to address these needs. 
 
 # Other Contributions within Source
-In order to try and not just put the software out there we also wanted to help development and implementation as well. 
-To help support these areas we have included additional artifacts within specific directories. 
+Within each component of the platform we wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
+
+The following common directories can be fond in every solution as materials are available:
 
 * content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the 
 content or site to help ensure everyone has all the available materials.
 * platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. 
-It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. These scripts currently cover A-MQ and Kafka. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
+It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
+* test-data: as you begin to become familiar with the code you will find test-data where we can provide it, these are typically around components that support industry standards based connectivity.
 
-# Data Enablement: iDAAS Connect Clinical Industry Standards
+# iDAAS Platform 
 The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to the clinical based industry standards of HL7 v2 messages and FHIR. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). With the final CMS rule around Interoperability we have also added FHIR R4 Support. 
 
 Here is a general visual of how iDAAS fits in and can enable innovation and solving the problem of integration innovation in the clinical space:
@@ -73,17 +75,6 @@ Here is a visual on the iDAAS Platform and all its specific components:
 <img src="content/images/iDAAS-Platform/iDAAS%20Platform%20-%20iDAAS%20Connect%20and%20Vendor%20FHIR%20Modules.png" alt="iDAAS Component Design" 
 width="600" height="600" />
 </p>
-
-# Industry Standard Support
-As mentioned above we discussed the industry Standard support. This section covers the clinical integration standards and detailed links that are support by the implementation of the platform:
-
-* [HL7 v2 Message Receivers](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185 "HL7 v2 Message Receivers") - Support for ADT, ORM, ORU, RDE, SCH, MFN, MDM and VXU message types. Connected Clinical does not care about specific HL7 version, its has been tested from version 2.1 through 2.8.
-* [FHIR Clinical Receivers](https://www.hl7.org/fhir/ "HL7 FHIR") - Support for FHIR Clinical is currently being implemented. The platform will focus on delivery R4 (4.01) support to align with the CMS guidance on Interoperability and Patient Access. 
-
-# Development IDE
-The iDAAS (Intelligent Data as a Service) Clinical platform was initially developed using Eclipse. While this can still be used to update code, the team wanted to share its has transitioned to the following Development IDE and plugins: 
-
-* IntelliJ Community IDE with the following plugins: Apache Camel Plugin, Big Data Tools Plugin and Kubernetes Plugin
 
 # iDAAS Technologies
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
@@ -114,21 +105,20 @@ Here are some specific details for all the demonstrations developed:
 | Sending Application(s)|  MMS (Main Medical Software)/Care Kiosk UI |
 | Custom Integrated Application | myEHR |
 
+
 # Building and Running
 
-This code can be built (and will be run) with the following command:
+The following commands can be used within ANY numerous components of the solution (when not applicable the components will have specific compile, build and package instructions). 
 
 mvn clean install
 
-To repackage the solution to a single jar:
+To package the solution to a single jar:
 
 mvn package
 
-# Testing Data
+Run the package:
 
-After building, running and/or deploying implementors might want to test. We have included industry samples for everyone to leverage.
-
-Within the solutiin in the src/test/data there are two directories test-hl7 and test-fhir.
+java -jar <jarfile.jar>
 
 # Containers Based - Openshift (where possible) 
 It is assumed that:
