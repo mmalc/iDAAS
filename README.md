@@ -84,7 +84,7 @@ they enable:
 | Component | Feature |
 | -------- | --------- | 
 | <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-IndustryStandards" target="_blank">iDAAS Connect Clinical - Industry Standards</a> | Clinical Industry Standards support - HL7 and FHIR | 
-| iDAAS Connect Clinical - Third Party  | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Connect Clinical | 
+| <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-ThirdParty" target="_blank">iDAAS Connect Clinical - Third Party</a> | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Connect Clinical | 
 | iDAAS Connect Financials - Industry Standards | Financial Industry Standards support - HL7 and FHIR
 | iDAAS Connect Financials - Third Party    | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Financials| 
 | iDAAS DataHub | Transactional insight and repository for all things ocuring within any iDAAS component | 
