@@ -76,6 +76,21 @@ Here is a visual on the iDAAS Platform and all its specific components:
 width="600" height="600" />
 </p>
 
+# iDAAS Components
+The iDAAS (Intelligent Data as a Service) Clinical platform is extesible and made up of a series of components. 
+Here are the components and what they capabilities (This will also provide links to the respoctive respositories) 
+they enable:
+
+| Component | Feature |
+| -------- | --------- | 
+| iDAAS Connect Clinical - Industry Standards | Clinical Industry Standards support - HL7 and FHIR | 
+| iDAAS Connect Clinical - Third Party  | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Connect Clinical | 
+| iDAAS Connect Financials - Industry Standards | Financial Industry Standards support - HL7 and FHIR
+| iDAAS Connect Financials - Third Party    | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Financials| 
+| iDAAS DataHub | Transactional insight and repository for all things ocuring within any iDAAS component | 
+| iDAAS API | APIs built from the data tier within iDAAS Data Hub |
+| iDAAS UI | User Interface for accesing iDAAS Data Hub |
+    
 # iDAAS Technologies
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
 
@@ -93,7 +108,6 @@ It contains the following non Red Hat technologies:
 | RDBMS    | SQL Server, Postgres or MariaDB     |
 | Programming Language(s)     | Java 1.8 or higher (determined by software implementations. .NetCore 3 for APIs and UI Platforms|
 
-
 # Practical Implementation: Partnering Organization
 To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. While Everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building the industry scenarios and platform usage is driven by real world healthcare ongoing needs.
 
@@ -104,7 +118,6 @@ Here are some specific details for all the demonstrations developed:
 | Healthcare Facilities |  MCTN |   
 | Sending Application(s)|  MMS (Main Medical Software)/Care Kiosk UI |
 | Custom Integrated Application | myEHR |
-
 
 # Building and Running
 
