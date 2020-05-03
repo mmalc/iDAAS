@@ -90,7 +90,7 @@ they enable:
 | iDAAS Connect Financials - Industry Standards | Financial Industry Standards support - FHIR
 | iDAAS Connect Financials - Third Party    | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Financials| 
 |  <a href="https://github.com/RedHat-Healthcare/iDAAS-Data-DataHub/" target="_blank">iDAAS Data Hub</a> | Transactional insight and repository for all things ocuring within any iDAAS component | 
-| iDAAS API | APIs built from the data tier within iDAAS Data Hub |
+| <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a> | APIs built from the data tier within iDAAS Data Hub |
 | iDAAS UI | User Interface for accesing iDAAS Data Hub |
     
 # iDAAS Technologies
