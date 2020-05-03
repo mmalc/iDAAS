@@ -85,7 +85,9 @@ they enable:
 | -------- | --------- | 
 | <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-IndustryStandards" target="_blank">iDAAS Connect Clinical - Industry Standards</a> | Clinical Industry Standards support - HL7 and FHIR | 
 | <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-ThirdParty" target="_blank">iDAAS Connect Clinical - Third Party</a> | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Connect Clinical | 
-| iDAAS Connect Financials - Industry Standards | Financial Industry Standards support - HL7 and FHIR
+| iDAAS DREAM | DREAM (Dynamic Runtime Extensible Automated Mgmt). Component for implementing features and capabilities withing iDAAS |
+| iDAAS Event Builder | Ability to build POJOs to represent data in any manner needed for integration and these cana be invoked dynamically against dat within DREAM. Start with over 100 basic POJOs and add your own |
+| iDAAS Connect Financials - Industry Standards | Financial Industry Standards support - FHIR
 | iDAAS Connect Financials - Third Party    | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Financials| 
 |  <a href="https://github.com/RedHat-Healthcare/iDAAS-Data-DataHub/" target="_blank">iDAAS Data Hub</a> | Transactional insight and repository for all things ocuring within any iDAAS component | 
 | iDAAS API | APIs built from the data tier within iDAAS Data Hub |
