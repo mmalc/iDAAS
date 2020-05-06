@@ -1,12 +1,9 @@
 The iDAAS Platform central code repository. It is designed to be a launch point to all the specific components and artifacts that make iDAAS an extensible platform. Any iDAAS code IS ONLY intended to be run within resources that leverage the needed upstream software or equivalent licensed software as defined below within the content. In addition, this effort through its <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">open source licensing</a> selection ensures appropriate protection for all parties. Red Hat Healthcare is doing this to help the broader healthcare community and while a market within Red Hat this is an independant effort. 
 
 # Background
-For decades across the various markets within healthcare (clinical, financial, pharmacy and life sciences) integration has been a challenge for many differnt reasons. Within Red Hat there is a specific industry team dedicated to ensuring Red Hat's technologies meet the industry needs and ensuring its customers have meaningful platforms that demonstrate these capabilities. The Red Hat healthcare team, has had a specific interest in enabling and empowering healthcare organizations to transform their integration efforts while also introducing and infusing Red Hat's open organization, open source mindset and community based culture as well. As the Red Hat healthcare team started this journey they also wanted to ensure they could help showcase integration as an innovation enabler and helping simplify IT.
+For decades across the various markets within healthcare (clinical, financial, pharmacy and life sciences) integration has been a challenge for many differnt reasons. Within Red Hat there is a specific industry team dedicated to ensuring Red Hat's technologies meet the industry needs and ensuring its customers have meaningful platforms that demonstrate these capabilities, the Red Hat healthcare team. The focus of the team is enabling and empowering healthcare organizations to transform their organizations through infusing Red Hat's open organization, open source mindset and community based culture. As the Red Hat healthcare team started this journey they also wanted to ensure they could help showcase how Red Hat addressed the many variant and expansive needs of a healthcare organization. 
 
-As discussed in the introduction integration has been a challenge for decades in each market within healthcare. Within healthcare the challenges have been driven by many different factors, here are just a few common ones: industry standards (HL7) that aren't constrained enough, Clincal software vendor market constraints, COTS integration vendor lock-in, and government mandates that they cannot directly support without third party vendor engagement.
-
-As the Red Hat healthcare team thought about potential ways to help the clinical integration space, they came up 
-some differentiators for whatever platform would be built:
+As the Red Hat healthcare team thought about potential ways to help the organizations they wanted to ensure there were a set of specific differentiators no matter for whatever platform would be built:
 
 * Extensibility
 * Reduce Proprietary Knowledge
@@ -17,7 +14,7 @@ some differentiators for whatever platform would be built:
 * Deliver Consistentcy
 * Polyglot Language Support
 
-Here's how the differentiators are being addressed:
+Here's how the differentiators are expressed in more detail:
 
 * Extensibility: The focus has been on building an extensible platform based on need and usage. The platform is just a series of components that can be connected, extended or new components developed as developers and business teams work together. Within the platform it is developed to enable small to large and complex healthcare organizations to leverage this platform. The platform looks at ANY data as by the application, components, facilities, and overall organization associated with EVERY transaction. 
 * Reduce Proprietray Knowledge: We have removed COTS or black box box software and gone with a very open approach. Our approach leverages the numerous Open Source and upstream Open Source products Red Hat is engaged in. Here are several of the technologies this platform leverages: Spring Boot, Red Hat Fuse, Red Hat Process Automation Manager (Business Rules, Workflow and Complex Event Processing), Red Hat A-MQ Streams (Kafka)  - (we also into an A-MQ release as well).
@@ -29,8 +26,10 @@ Here's how the differentiators are being addressed:
 We don't require deep knowledge of the industry standards to get started, just common developer skillsets. 
 * Polyglot Language Support: Enabling the use of many different programming languages. The focus here is to ensure by major capability area a programming language is supported.
 
-# Platform: Connected Health / iDAAS 
-As part of the general vision for healthcare, the Red Hat healthcare team established a extensible platform, Connected Health/iDAAS (Intelligent Data As A Service). As we have above we wanted to focus on several things extensibility, open source enablement, consistency, modern development approach, disruption and community enablement. In this section we want to cover the specific components within iDAAS that are helping us build forward on these differentiators. As you are reading through this it is important to ensure understanding that iDAAS is a platform that is developed as a set of components working with industry leading technologies that enable us a broad range of capabilities, it is not merely a code base written in a programming language. The reason we have followed this pattern is that we can leverage a large set community to ensure we can address potential issues and concerns quickly with a large technical community. Let's do a walk through of the capability areas within iDAAS.
+As discussed in the introduction integration has been a challenge for decades in each market within healthcare. Within healthcare the challenges have been driven by many different factors, here are just a few common ones: industry standards (HL7) that aren't constrained enough, Clincal software vendor market constraints, COTS integration vendor lock-in, and government mandates that they cannot directly support without third party vendor engagement.
+
+# Connected Health / iDAAS (Intelligent Data As A Service)
+When you think of all the needed areas of a healthcare organization, data/data integration must be very high on that list. For the Red Hat healthcare team it was a very logical place to start. Recalling back to earlier the healthcare team wanted to ensure a focus on several things extensibility, open source enablement, consistency, modern development approach, disruption and community enablement. As it was thought through since data powers applications and both of these are strong suits of Red Hat it became a great starting point. With a focus around data integration the Red Hat healthcare team wanted to ensure iDAAS platform was nimble, lightweight, and focused on capabilities to ensure healthcare maket(s) needs could be addressed in a consistent manner. To ensure proper direction the Red Hat healthcare team put together a capability matrix or set to ensure what iDAAS could and would address.
 
 Here are some of the capabilities, the five R’s:
 
@@ -50,20 +49,6 @@ Here are the technologies that drive the capabilities:
 * Data: We currently are moving to support DDLs for SQL Server, Maria DB (MySQL) and Postgres. This is because there is wide adoption of these within healthcare. The first few implementations with be SQL Server DDL centric as well finalize data model validation. We also intend to expand towards NoSQL standards quickly as we continue to implement new features.
 Connected Health/iDAAS overall objective is to simplify data integration and interoperability needs. By establishing a platform initally this enabled the team to focus on the overall industry needs and work through them and establish capabilities for each. As the capabilities were worked through components have been developed to address these needs. 
 
-# Other Contributions within Source
-Within each component of the platform we wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
-
-The following common directories can be fond in every solution as materials are available:
-
-* content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the 
-content or site to help ensure everyone has all the available materials.
-* platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. 
-It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
-* test-data: as you begin to become familiar with the code you will find test-data where we can provide it, these are typically around components that support industry standards based connectivity.
-
-# iDAAS Platform 
-The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to the clinical based industry standards of HL7 v2 messages and FHIR. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). With the final CMS rule around Interoperability we have also added FHIR R4 Support. 
-
 Here is a general visual of how iDAAS fits in and can enable innovation and solving the problem of integration innovation in the clinical space:
 <p align="center" >
 <img src="content/images/iDAAS-Platform/iDAAS%20-%20High%20Level%20Solution%20Overview.png" alt="Healthcare Integration" width="500" height="350" />
@@ -75,7 +60,18 @@ Here is a visual on the iDAAS Platform and all its specific components:
 width="600" height="600" />
 </p>
 
-# iDAAS Components
+# iDAAS Connect
+The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to the clinical based industry standards of HL7 v2 messages and FHIR. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). With the final CMS rule around Interoperability we have also added FHIR R4 Support. 
+
+# iDAAS Event Builder
+
+# iDAAS Data Hub
+
+# iDAAS UI
+
+# iDAAS API
+
+# iDAAS Repositories
 The iDAAS (Intelligent Data as a Service) Clinical platform is extesible and made up of a series of components. 
 Here are the components and what they capabilities (This will also provide links to the respoctive respositories) 
 they enable:
@@ -91,6 +87,18 @@ they enable:
 |  <a href="https://github.com/RedHat-Healthcare/iDAAS-DataIntegration-DataHub/" target="_blank">iDAAS Data Hub</a> | Transactional insight and repository for all things ocuring within any iDAAS component | 
 | <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a> | APIs built from the data tier within iDAAS Data Hub |
 |  <a href="https://github.com/RedHat-Healthcare/iDAAS-UI/" target="_blank">iDAAS UI</a> | User Interface for accesing iDAAS Data Hub |
+
+# Other Contributions within Source
+Within each component of the platform we wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
+
+The following common directories can be fond in every solution as materials are available:
+
+* content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the 
+content or site to help ensure everyone has all the available materials.
+* platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. 
+It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
+* test-data: as you begin to become familiar with the code you will find test-data where we can provide it, these are typically around components that support industry standards based connectivity.
+
  
 # iDAAS Technologies
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
