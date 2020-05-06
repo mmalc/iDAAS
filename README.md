@@ -61,32 +61,29 @@ width="600" height="600" />
 </p>
 
 # iDAAS Connect
-The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to the clinical based industry standards of HL7 v2 messages and FHIR. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). With the final CMS rule around Interoperability we have also added FHIR R4 Support. 
+The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to any systems is branded iDAAS Connect and then the market vertical and then the type of connectivity. Lets demonstrate that naming convention.
+
+iDAAS Connect Family of Offerings (These are linked to the respective code repositories):
+  
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-IndustryStandards" target="_blank">iDAAS Connect Clinical - Industry Standards</a>: This connects specifically to clinical integration standards and specific protocols that might be required. For this component it is designed to connect to HL7v2 and FHIR based transactions. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). For FHIR, we have included over twelve of the commonly used Clinical Resources.
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-ThirdParty" target="_blank">iDAAS Connect Clinical - Third Party</a> : This connects iDAAS to receive data from almost two dozens connectors. The connectors include  JDBC (any jdbc compliant data source with a jar), Kafka, FTP/sFTP and sFTP, AS400, HTTP(s), REST and many more.
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Financial-IndustryStandards" target="_blank">iDAAS Connect Financial Industry Standards</a>: This connects specifically to financial integration standards and specific protocols that might be required. For this component it is designed to connect to FHIR based transactions. For FHIR, we have included six of the commonly used Financial Resources.
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Financial-ThirdParty" target="_blank">iDAAS Connect Financial Third Party</a>: (Same as its Clinical counterpart above) This connects iDAAS to receive data from almost two dozens connectors. The connectors include  JDBC (any jdbc compliant data source with a jar), Kafka, FTP/sFTP and sFTP, AS400, HTTP(s), REST and many more.
+
+# iDAAS DREAM
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-DREAM/" target="_blank">iDAAS DREAM</a>:DREAM (Dynamic Runtime Extensible Automated Mgmt). Component for implementing features and capabilities withing iDAAS. 
 
 # iDAAS Event Builder
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-EventBuilder/" target="_blank">iDAAS Event Builder</a>: Ability to build POJOs to represent data in any manner needed for integration and these cana be invoked dynamically against dat within DREAM. Start with over 100 basic POJOs and add your own 
 
 # iDAAS Data Hub
+<a href="https://github.com/RedHat-Healthcare/iDAAS-DataIntegration-DataHub/" target="_blank">iDAAS Data Hub</a>: Transactional insight and repository for all things ocuring within any iDAAS component.
 
 # iDAAS UI
-
+ <a href="https://github.com/RedHat-Healthcare/iDAAS-UI/" target="_blank">iDAAS UI</a> | User Interface for accesing iDAAS Data Hub.
+ 
 # iDAAS API
-
-# iDAAS Repositories
-The iDAAS (Intelligent Data as a Service) Clinical platform is extesible and made up of a series of components. 
-Here are the components and what they capabilities (This will also provide links to the respoctive respositories) 
-they enable:
-
-| Component | Feature |
-| -------- | --------- | 
-| <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-IndustryStandards" target="_blank">iDAAS Connect Clinical - Industry Standards</a> | Clinical Industry Standards support - HL7 and FHIR | 
-| <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-ThirdParty" target="_blank">iDAAS Connect Clinical - Third Party</a> | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Connect Clinical | 
-|<a href="https://github.com/RedHat-Healthcare/iDAAS-DREAM/" target="_blank">iDAAS DREAM</a> | DREAM (Dynamic Runtime Extensible Automated Mgmt). Component for implementing features and capabilities withing iDAAS |
-| <a href="https://github.com/RedHat-Healthcare/iDAAS-EventBuilder/" target="_blank">iDAAS Event Builder</a> | Ability to build POJOs to represent data in any manner needed for integration and these cana be invoked dynamically against dat within DREAM. Start with over 100 basic POJOs and add your own |
-| iDAAS Connect Financials - Industry Standards | Financial Industry Standards support - FHIR
-| iDAAS Connect Financials - Third Party    | Connectivity to third party sources - JDBC, Kafka, FTP/sFTP and sFTP, and dozens more to feed data into iDAAS Financials| 
-|  <a href="https://github.com/RedHat-Healthcare/iDAAS-DataIntegration-DataHub/" target="_blank">iDAAS Data Hub</a> | Transactional insight and repository for all things ocuring within any iDAAS component | 
-| <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a> | APIs built from the data tier within iDAAS Data Hub |
-|  <a href="https://github.com/RedHat-Healthcare/iDAAS-UI/" target="_blank">iDAAS UI</a> | User Interface for accesing iDAAS Data Hub |
+ <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a>: APIs built from the data tier within iDAAS Data Hub.
 
 # Other Contributions within Source
 Within each component of the platform we wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
@@ -100,7 +97,7 @@ It should be understood that these scripts will need to be tweaked, mostly to ad
 * test-data: as you begin to become familiar with the code you will find test-data where we can provide it, these are typically around components that support industry standards based connectivity.
 
  
-# iDAAS Technologies
+# Technologies Used By iDAAS
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
 
 | Capabilty Area | Upstream Release | Red Hat Release |
@@ -172,5 +169,3 @@ Then create the quickstart template:
 oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/GA/quickstarts/spring-boot-camel-template.json
 Now when you use "Add to Project" button in the OpenShift console, you should see a template for this quickstart.
 
-# Other Related GitHub Repositories for Connected Health / iDAAS Platform Components
-As mentioned above iDAAS is a platform and is built in a very modular manner. We will be releasing other public Git Hub repositories that will enable additional extensibility.
