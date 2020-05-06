@@ -86,7 +86,7 @@ iDAAS Connect Family of Offerings (These are linked to the respective code repos
  <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a>: APIs built from the data tier within iDAAS Data Hub.
 
 # Other Contributions within Source
-Within each component of the platform we wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
+Within each component of the platform the Red Hat Healthcare team wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
 
 The following common directories can be fond in every solution as materials are available:
 
@@ -116,56 +116,3 @@ It contains the following non Red Hat technologies:
 
 # Practical Implementation: Partnering Organization
 To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. While Everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building the industry scenarios and platform usage is driven by real world healthcare ongoing needs.
-
-Here are some specific details for all the demonstrations developed:
-
-| Item | Technologies |
-| ---- | ------------ |
-| Healthcare Facilities |  MCTN |   
-| Sending Application(s)|  MMS (Main Medical Software)/Care Kiosk UI |
-| Custom Integrated Application | myEHR |
-
-# Building and Running
-
-The following commands can be used within ANY numerous components of the solution (when not applicable the components will have specific compile, build and package instructions). 
-
-mvn clean install
-
-To package the solution to a single jar:
-
-mvn package
-
-Run the package:
-
-java -jar <jarfile.jar>
-
-# Containers Based - Openshift (where possible) 
-It is assumed that:
-
-OpenShift platform is already running, if not you can find details how to Install OpenShift at your site.
-Your system is configured for Fabric8 Maven Workflow, if not you can find a Get Started Guide
-The example can be built and run on OpenShift using a single goal:
-
-mvn fabric8:deploy
-When the example runs in OpenShift, you can use the OpenShift client tool to inspect the status
-
-To list all the running pods:
-
-oc get pods
-Then find the name of the pod that runs this quickstart, and output the logs from the running pods with:
-
-oc logs <name of pod>
-You can also use the OpenShift web console to manage the running pods, and view logs and much more.
-
-Running via an S2I Application Template
-
-Application templates allow you deploy applications to OpenShift by filling out a form in the OpenShift console that allows you to adjust deployment parameters. This template uses an S2I source build so that it handle building and deploying the application for you.
-
-First, import the Fuse image streams:
-
-oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/GA/fis-image-streams.json
-Then create the quickstart template:
-
-oc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/GA/quickstarts/spring-boot-camel-template.json
-Now when you use "Add to Project" button in the OpenShift console, you should see a template for this quickstart.
-
