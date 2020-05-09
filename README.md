@@ -88,16 +88,28 @@ iDAAS Connect Family of Offerings (These are linked to the respective code repos
 ## iDAAS API
  <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a>: APIs built from the data tier within iDAAS Data Hub.
 
-# Other Contributions within Source
-Within each component of the platform the Red Hat Healthcare team wanted to try and ensure to help developers and provide common implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
+# Supporting Materials and Details
+Within each component of the platform the Red Hat Healthcare team wanted to try and ensure to help developers and provide common 
+implementation direction as we get feedback and continue to expand the iDAAS platforms footprint across SIs (Systems Integrators) and organizations.
 
-The following common directories can be fond in every solution as materials are available:
-
-* content: This directory is intended to maintain any content published about the platform. Within this directory is the Development documentation and implementation guides along with images that are leveraged within the 
-content or site to help ensure everyone has all the available materials.
-* platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. 
-It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
-* test-data: as you begin to become familiar with the code you will find test-data where we can provide it, these are typically around components that support industry standards based connectivity.
+## Content
+* content: Is a high-level directory intended to maintain any content published about the platform. 
+### General
+* images/general - This is where general images used in content or materials for iDAAS are maintained.
+* images/general/iDAAS-Platform - Images specific to the iDAAS platform and components.
+* published/PDFs - Published Content about the iDAAS Platform
+### Testing Data
+* testdata: is a base directory that has several sub-directories. Each sub-directory is intended to be specific to the type of data it contains.
+ #### samples-bluebutton
+ These are from the CMS Bluebutton site <a href="https://bluebutton.cms.gov/assets/ig/index.html" target="_blank">Blue Button CMS Site</a>
+ #### samples-fhir
+ These samples are from the HL7 FHIR community.
+ #### samples-hl7
+ These have come from merging some public sources. Here are a few examples: <br>
+ <a href="https://asiis.azdhs.gov/phchub/help/SampleHL7Msgs.htm" target="_blank">Sample Source 1</a><br>
+ <a href="https://blog.interfaceware.com/components-of-an-hl7-message/" target="_blank">Sample Message Source 2</a><br>
+ <a href="https://help.interfaceware.com/getting-sample-hl7-data.html" target="_blank">Sample Message Source 3</a>
+   
  
 # Technologies Used By iDAAS
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
