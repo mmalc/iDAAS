@@ -28,7 +28,7 @@ We don't require deep knowledge of the industry standards to get started, just c
 
 As discussed in the introduction integration has been a challenge for decades in each market within healthcare. Within healthcare the challenges have been driven by many different factors, here are just a few common ones: industry standards (HL7) that aren't constrained enough, Clincal software vendor market constraints, COTS integration vendor lock-in, and government mandates that they cannot directly support without third party vendor engagement.
 
-# Connected Health / iDAAS (Intelligent Data As A Service)
+# Connected Health / iDAAS (Intelligent Data As A Service) Platform
 When you think of all the needed areas of a healthcare organization, data/data integration must be very high on that list. For the Red Hat healthcare team it was a very logical place to start. Recalling back to earlier the healthcare team wanted to ensure a focus on several things extensibility, open source enablement, consistency, modern development approach, disruption and community enablement. As it was thought through since data powers applications and both of these are strong suits of Red Hat it became a great starting point. With a focus around data integration the Red Hat healthcare team wanted to ensure iDAAS platform was nimble, lightweight, and focused on capabilities to ensure healthcare maket(s) needs could be addressed in a consistent manner. To ensure proper direction the Red Hat healthcare team put together a capability matrix or set to ensure what iDAAS could and would address.
 
 Here are some of the capabilities, the five R’s:
@@ -60,7 +60,10 @@ Here is a visual on the iDAAS Platform and all its specific components:
 width="600" height="600" />
 </p>
 
-# iDAAS Connect
+# iDAAS Platform Components
+Below is a breakdown of each of the components that make up the iDAAS Platform
+
+## iDAAS Connect
 The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to any systems is branded iDAAS Connect and then the market vertical and then the type of connectivity. Lets demonstrate that naming convention.
 
 iDAAS Connect Family of Offerings (These are linked to the respective code repositories):
@@ -70,19 +73,19 @@ iDAAS Connect Family of Offerings (These are linked to the respective code repos
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Financial-IndustryStandards" target="_blank">iDAAS Connect Financial Industry Standards</a>: This connects specifically to financial integration standards and specific protocols that might be required. For this component it is designed to connect to FHIR based transactions. For FHIR, we have included six of the commonly used Financial Resources.
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Financial-ThirdParty" target="_blank">iDAAS Connect Financial Third Party</a>: (Same as its Clinical counterpart above) This connects iDAAS to receive data from almost two dozens connectors. The connectors include  JDBC (any jdbc compliant data source with a jar), Kafka, FTP/sFTP and sFTP, AS400, HTTP(s), REST and many more.
 
-# iDAAS DREAM
+## iDAAS DREAM
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-DREAM/" target="_blank">iDAAS DREAM</a>:DREAM (Dynamic Runtime Extensible Automated Mgmt). Component for implementing features and capabilities withing iDAAS. 
 
-# iDAAS Event Builder
+## iDAAS Event Builder
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-EventBuilder/" target="_blank">iDAAS Event Builder</a>: Ability to build POJOs to represent data in any manner needed for integration and these cana be invoked dynamically against dat within DREAM. Start with over 100 basic POJOs and add your own 
 
-# iDAAS Data Hub
+## iDAAS Data Hub
 <a href="https://github.com/RedHat-Healthcare/iDAAS-DataIntegration-DataHub/" target="_blank">iDAAS Data Hub</a>: Transactional insight and repository for all things ocuring within any iDAAS component.
 
-# iDAAS UI
+## iDAAS UI
  <a href="https://github.com/RedHat-Healthcare/iDAAS-UI/" target="_blank">iDAAS UI</a> | User Interface for accesing iDAAS Data Hub.
  
-# iDAAS API
+## iDAAS API
  <a href="https://github.com/RedHat-Healthcare/iDAAS-DataHub-API/" target="_blank">iDAAS API</a>: APIs built from the data tier within iDAAS Data Hub.
 
 # Other Contributions within Source
@@ -95,7 +98,6 @@ content or site to help ensure everyone has all the available materials.
 * platform-scripts: designed to assist implementation with scripts that can be downloaded and leveraged. 
 It should be understood that these scripts will need to be tweaked, mostly to address base implemented directories of solutions. The intent for them is to be able to start the products and enable implementors to quickly get the products running. 
 * test-data: as you begin to become familiar with the code you will find test-data where we can provide it, these are typically around components that support industry standards based connectivity.
-
  
 # Technologies Used By iDAAS
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
@@ -115,4 +117,4 @@ It contains the following non Red Hat technologies:
 | Programming Language(s)     | Java 1.8 or higher (determined by software implementations. .NetCore 3 for APIs and UI Platforms|
 
 # Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare marketspace. While Everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building the industry scenarios and platform usage is driven by real world healthcare ongoing needs.
+To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare market. While everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building the industry scenarios and platform usage is driven by real world healthcare ongoing use cases/scenarios and needs.
