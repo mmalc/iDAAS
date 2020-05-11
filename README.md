@@ -98,7 +98,7 @@ implementation direction as we get feedback and continue to expand the iDAAS pla
 * images/general - This is where general images used in content or materials for iDAAS are maintained.
 * images/general/iDAAS-Platform - Images specific to the iDAAS platform and components.
 * published/PDFs - Published Content about the iDAAS Platform
-### Testing Data
+### TestData
 * testdata: is a base directory that has several sub-directories. Each sub-directory is intended to be specific to the type of data it contains.
  #### samples-bluebutton
  These are from the CMS Bluebutton site <a href="https://bluebutton.cms.gov/assets/ig/index.html" target="_blank">Blue Button CMS Site</a>
@@ -109,6 +109,13 @@ implementation direction as we get feedback and continue to expand the iDAAS pla
  <a href="https://asiis.azdhs.gov/phchub/help/SampleHL7Msgs.htm" target="_blank">Sample Source 1</a><br>
  <a href="https://blog.interfaceware.com/components-of-an-hl7-message/" target="_blank">Sample Message Source 2</a><br>
  <a href="https://help.interfaceware.com/getting-sample-hl7-data.html" target="_blank">Sample Message Source 3</a>
+
+## Platform Scripts
+General Platform scripts area. These are uplifted from various projects based on market types.
+### Clinical
+Clinical centric components Kafka topics
+### Financial
+Financial centric components Kafka topics
    
  
 # Technologies Used By iDAAS
