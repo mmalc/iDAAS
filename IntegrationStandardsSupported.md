@@ -19,14 +19,13 @@ The iDAAS Platform has been tested and has the following HL7 v2 support.
 ## HL7
 |Message Trigger| Message Trigger Desc. | Message Details | Total Msg Triggers |
 |---------------| --------------------- | --------------- | ------------------ |
-|ADT | Admissions, Discharges, Transfers | A01 to A61 Any v2 message version release | 60
-|ORM | Orders | Any v2 message version release | 4
-|ORU | Results| Any v2 message version release | 4
-|MDM | Master Data Management | Any v2 message version release | 5
-|MFN | Master File Notifications | Any v2 message version release | 5
-|SIU | Schedule | Any v2 message version release | 15 
-|SIU | Schedule | Any v2 message version release | 15 
-|VXU |Vaccinations | Any v2 message version release |1
+|<a href="https://datica.com/academy/hl7-201-the-admission-discharge-transfer-adt-message/" target="_blank">ADT</a> | Admissions, Discharges, Transfers | A01 to A61 Any v2 message version release | 60
+|<a href="https://datica.com/academy/hl7-203-the-hl7-orm-order-entry-message/" target="_blank">ORM</a> | Orders | Any v2 message version release | 4
+|<a href="https://www.lyniate.com/knowledge-hub/hl7-oru-message/" target="_blank">ORU</a> | Results| Any v2 message version release | 4
+|<a href="https://datica.com/academy/hl7-205-the-hl7-mdm-medical-document-management-message/" target="_blank">MDM</a> | Master Data Management | Any v2 message version release | 5
+|<a href="http://www.hl7.eu/refactored/dom07.html" target="_blank">MFN</a> | Master File Notifications | Any v2 message version release | 5
+|<a href="https://www.lyniate.com/knowledge-hub/hl7-siu-message/" target="_blank">SIU</a> | Schedule | Any v2 message version release | 15 
+|<a href="https://hl7-definition.caristix.com/v2/HL7v2.3/TriggerEvents/VXU_V04" target="_blank">VXU</a> |Vaccinations | Any v2 message version release |1
 |||Total Message Support | 95
 <br>
 
