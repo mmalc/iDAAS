@@ -126,12 +126,12 @@ Financial centric components Kafka topics
 # Technologies Used By iDAAS
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
 
-| Capabilty Area | Upstream Release | Red Hat Release |
-| -------------- | ---------------- | --------------- |
-| Integration    | Apache Camel     | Red Hat Fuse   |
-| Business Rules | Drools           | Red Hat Decision Mgr |
-| Data Streaming | Apache Kafka     | Red Hat A-MQ Streams |
-| Containers     | K8               | OpenShift            |
+| Capabilty Area | Upstream Release | Red Hat Release |Requirement|
+| -------------- | ---------------- | --------------- |---------- |
+| Integration    | Apache Camel     | Red Hat Fuse   | Core of the Platform|
+| Business Rules | Drools           | Red Hat Decision Mgr |Used by iDAAS Dream, can be optional if no DREAM components implemented|
+| Data Streaming | Apache Kafka     | Red Hat A-MQ Streams |Requirement by platform for messaging |
+| Containers     | K8               | OpenShift            |End User defined, platform can be run stand alone or at scale|
 
 It contains the following non Red Hat technologies:
 
