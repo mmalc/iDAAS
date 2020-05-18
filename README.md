@@ -64,23 +64,27 @@ width="600" height="600" />
 Below is a breakdown of each of the components that make up the iDAAS Platform
 
 ## iDAAS Connect
-The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. Within iDAAS, this is the component responsible for providing connectivity to any systems is branded iDAAS Connect and then the market vertical and then the type of connectivity. Lets demonstrate that naming convention.
-
-iDAAS Connect Family of Offerings (These are linked to the respective code repositories):
+The problem of healthcare connectivity and data enablement has been around for decades. Vendors have had long standing practices of limiting paying customers to the data within the systems they operate and manage. As healthcare organizations prepare for their digital experiences, or look to re-evaluate their current digital experience capabilities, this is no longer a practice that can be tolerated or endured. iDAAS Connect Family of Offerings (These are linked to the respective code repositories):
   
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-IndustryStandards" target="_blank">iDAAS Connect Clinical - Industry Standards</a>: This connects specifically to clinical integration standards and specific protocols that might be required. For this component it is designed to connect to HL7v2 and FHIR based transactions. From an integration connectivity and standards perspective it can demonstrates the processesing HL7v2 messages of the following types from any vendor and any specifc message version from 2.1 to 2.8: ADT (Admissions), ORM (Orders), ORU (Results), SCH (Schedules), PHA (Pharmacy), MFN (Master File Notifications), MDM (Medical Document Management) and VXU (Vaccinations). For FHIR, we have included over twelve of the commonly used Clinical Resources.
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-ThirdParty" target="_blank">iDAAS Connect Clinical - Third Party</a> : This connects iDAAS to receive data from almost two dozens connectors. The connectors include  JDBC (any jdbc compliant data source with a jar), Kafka, FTP/sFTP and sFTP, AS400, HTTP(s), REST and many more.
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Clinical-MiddleTier" target="_blank">iDAAS Connect Clinical Middle Tier</a>: This component is specifically implemented to help keep the iDAAS Connect Clinical Industry Standards component small by moving the data streaming and HCDD-EIP (Healthcare Data Distribution and Enterprise Integration Pattern). 
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Financial-IndustryStandards" target="_blank">iDAAS Connect Financial Industry Standards</a>: This connects specifically to financial integration standards and specific protocols that might be required. For this component it is designed to connect to FHIR based transactions. For FHIR, we have included six of the commonly used Financial Resources.
 * <a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-Financial-ThirdParty" target="_blank">iDAAS Connect Financial Third Party</a>: (Same as its Clinical counterpart above) This connects iDAAS to receive data from almost two dozens connectors. The connectors include  JDBC (any jdbc compliant data source with a jar), Kafka, FTP/sFTP and sFTP, AS400, HTTP(s), REST and many more.
 
 ## iDAAS DREAM
-* <a href="https://github.com/RedHat-Healthcare/iDAAS-DREAM/" target="_blank">iDAAS DREAM</a>:DREAM (Dynamic Runtime Extensible Automated Mgmt). Component for implementing features and capabilities withing iDAAS. 
-
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-DREAM/" target="_blank">iDAAS DREAM</a>:DREAM's design intent is to enable Red Hat, partners, SIs and developers to implement iDAAS and/or other capabilities internal or external to iDAAS in a dynamic manner without the need for stopping the platform and needing to restart it to work with data while adding new features.
+ 
 ## iDAAS Event Builder
-* <a href="https://github.com/RedHat-Healthcare/iDAAS-EventBuilder/" target="_blank">iDAAS Event Builder</a>: Ability to build POJOs to represent data in any manner needed for integration and these cana be invoked dynamically against dat within DREAM. Start with over 100 basic POJOs and add your own 
+* <a href="https://github.com/RedHat-Healthcare/iDAAS-EventBuilder/" target="_blank">iDAAS Event Builder</a>: iDAAS Event Builder is what enables Red Hat, partners, SIs and developers to develop, extend or enhance the platform's ability to process data into any type of needed custom format for any type of needed processing. iDAAS Event Builder is designed to call out and invoke needed events and can be customized based on business needs very quickly. The only thing past cloning the source code is setting up the appropriate way to include iDAAS Event Builder jar files so that it can be included. If you do not wish to leverage the existing code, enhance or extend it developers are able to add their own custom code for processing and object building.
 
 ## iDAAS Data Hub
-<a href="https://github.com/RedHat-Healthcare/iDAAS-DataIntegration-DataHub/" target="_blank">iDAAS Data Hub</a>: Transactional insight and repository for all things ocuring within any iDAAS component.
+<a href="https://github.com/RedHat-Healthcare/iDAAS-DataIntegration-DataHub/" target="_blank">iDAAS Data Hub</a>: iDAAS Data Hub is where data relative to the platform is stored. Like the rest of iDAAS it is intended to be extensibile. iDAAS Data Hub is a platform to enable processing of data into the various components and data models included. The key things Data Hub is meant to ensure resources have data driven insights from ANY activity the iDAAS platform will do. A key thing to note in the data model and events the system focuses on is a way to associate one organization to many healthcare entities and to many applications and within each application any components wished to be defined. This is ALL up to the implementation. Because of this data enablement iDAAS focuses on enabling a detailed eventing model to iDAAS Data Hub for any activities the system does, this specifically is done through a transaction event which has a rich set of data attributes to track:
+* The iDAAS action being leveraged 
+* The iDAAS component that is leveraging the action
+* The date and time of the action
+* The data involved within the component
+* A subset of other attributes depending upon the action type: sending application, transactions processed, transactions generated, processing times, response times, and several more.
 
 ## iDAAS UI
  <a href="https://github.com/RedHat-Healthcare/iDAAS-UI/" target="_blank">iDAAS UI</a> | User Interface for accesing iDAAS Data Hub.
@@ -117,7 +121,6 @@ Clinical centric components Kafka topics
 ### Financial
 Financial centric components Kafka topics
    
- 
 # Technologies Used By iDAAS
 The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
 
@@ -136,4 +139,40 @@ It contains the following non Red Hat technologies:
 | Programming Language(s)     | Java 1.8 or higher (determined by software implementations. .NetCore 3 for APIs and UI Platforms|
 
 # Practical Implementation: Partnering Organization
-To support ANY developed artifcats the Red Hat Healthcare team has created a fictious company named Care Delivery Corporation US (CADuCeUS). Care Delivery Corp. US is intended to help Red Hat Healthcare demonstrate its solutions across all areas of the healthcare market. While everything associated with Care Delivery Corp US is fictiotious including the software they leverage and are building the industry scenarios and platform usage is driven by real world healthcare ongoing use cases/scenarios and needs.
+In order to address the healthcare market needs Red Hat’s healthcare team needed to ensure they had a real world market focus to build out relevant market demonstrations and workshops for the platforms it was creating. To help achieve this Red Hat Healthcare created a fictitious healthcare company named Care Delivery Corp US, it’s acronym is CADUCEUS (the medical symbol). The intent of doing this is to have a healthcare enterprise that resonates within the healthcare market. 
+
+Here are all the various areas of healthcare the Care Delivery Corporation US will help Red Hat healthcare demonstrate its relevant platform(s).
+* Healthcare provider service(s)
+  * Hospitals
+  * Physicians
+  * Clinics
+  * Same day surgery centers
+  * Various ancillary such as radiology services
+  * Cancer treatment and chronic disease management
+* Provide healthcare support services they provide for themselves and some other healthcare organizations. 
+  * Billing
+  * Staffing
+* Provide support for their healthcare services IT needs.
+  * Operations teams to implementing and supporting COTS products
+  * Data Organization supporting reporting and analytics needs
+  * Integration Organization to support their data integration needs
+  * Develop some customized business driven solutions 
+  * Security organization to ensure compliance 
+* Life sciences space to support their healthcare needs around Cancer treatment and chronic disease management
+
+## Scenario: IT Digitization 
+As  with any organization, irrespective of industry or market, Care Delivery Corp is re-evaluating its overall IT capabilities as a by product of needing to move into the digital realm. This re-evaluation is also being heavily influenced by their need to also prepare for upcoming government mandates around interoperability requirements specific to data access, not only for their patients but also their other businesses as well. Through the journey of their re-evaluation of capabilities they have identified some very consistent challenges they are having: lack of ability to innovate, vendor lock in, data interoperability incapabilities, without waiting for numerous vendors, experience problems from partner to customer to patient to clinician to technologist. As they took these common findings to their enterprise integration team the leadership team realized that also have a debt problem: technical, operational and functional in the way they deliver integration. So they decided to look at the overall application development and integration market landscape in general and quickly realized that they wanted to focus mostly on the Open Source market versus a series of COTS products. As they looked at the Open Source space Red Hat emerged as the leader. The technical leadership team realized that Red Hat had a very solid set of technologies to provide them the greatest range of capabilities for their current and future needs. From that decision came the details around what platform and capabilities can Red Hat provide? Red Hat has dozens of products that build massively extensive capabilities for some of the largest corporations in the world from their operating system to automation to integration to business rules to complex event processing to application development to API management. 
+
+Based on all these findings, Care Delivery Corp has decided to start their digital transformation and implement a home grown platform, myEMR. myEMR is intended to be a platform for all Care Delivery US to leverage for its go forward digital needs, the intent is to have it drive all clinical data needs. In order to start their work efforts they wanted to start integration for their enterprise standard clinical management information systems, Major Medical Systems (MMS) platform called Care Kiosk. 
+
+Enterprise Organization        CareDelivery US
+Facility                Medical Center TN (MCTN)
+Sending Application         Major Medical System (MMS) - Care Kiosk
+
+## Scenario: Existing Implementation Scenario(s) 
+As Care Delivery Corp US talked with their enterprise integration team they asked for a general architecture for their digital implementation needs. The plan is for one medical facility Medical Center TN (MCTN) and getting the following industry standard transactions processing:
+* HL7 v2: Admissions, Orders, Results, Schedules, Master File Notifications, Medical Document Management, Scheduling and Vaccinations. 
+* FHIR: All FHIR resources to provide the CMS Final Interoperability Rule compliance and help start them towards building out modern integration capabilities.
+<br>
+What they realized is they could not approach this effort like implementing clinical systems and knew they needed to develop an innovative approach to address their current and future data needs for this transformation.  
+
