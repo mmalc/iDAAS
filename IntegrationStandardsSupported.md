@@ -134,7 +134,5 @@ We have decided to focus on what CMS has defined as the standard for Interoperab
 |<a href="https://www.hl7.org/fhir/testreport.html" target="_blank">Test Report</a> | 
 
 ### FHIR Server
-This includes comprehensive FHIR transaction processing requirements including detailed parsing capabilities for growth 
-and extensibility.  Also, we wanted to ensure we could support multiple third party vendor based FHIR conformance servers, so we are implementing this in a repeatable manner.
-
+A FHIR Server is not required for our implementation or CMS compliance; however, these servers can help organizations with capabilities they might need. The iDAAS Connect component is designed to connect to multiple vendor implementations of FHIR servers in a repeatable manner. 
 
