@@ -60,6 +60,23 @@ Here is a visual on the iDAAS Platform and all its specific components:
 width="600" height="600" />
 </p>
 
+# Technologies Used By iDAAS
+The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
+
+| Capabilty Area | Upstream Release | Red Hat Release |Requirement|
+| -------------- | ---------------- | --------------- |---------- |
+| Integration    | Apache Camel     | Red Hat Fuse   | Core of the Platform|
+| Business Rules | Drools           | Red Hat Decision Mgr |Used by iDAAS Dream, can be optional if no DREAM components implemented|
+| Data Streaming | Apache Kafka     | Red Hat A-MQ Streams |Requirement by platform for messaging |
+| Containers     | K8               | OpenShift            |End User defined, platform can be run stand alone or at scale|
+
+It contains the following non Red Hat technologies:
+
+| Capabilty Area | Technologies |
+| -------------- | ------------ |
+| RDBMS    | SQL Server, Postgres or MariaDB     |
+| Programming Language(s)     | Java 1.8 or higher (determined by software implementations. .NetCore 3 for APIs and UI Platforms|
+
 # iDAAS Platform Components
 Below is a breakdown of each of the components that make up the iDAAS Platform
 
@@ -122,23 +139,21 @@ General Platform scripts area. These are uplifted from various projects based on
 Clinical centric components Kafka topics
 ### Financial
 Financial centric components Kafka topics
-   
-# Technologies Used By iDAAS
-The iDAAS (Intelligent Data as a Service) Clinical platform is intended for usage for the healthcare market. It contains the following Red Hat technologies, (this platform will also will work with their upstream equivalents):
 
-| Capabilty Area | Upstream Release | Red Hat Release |Requirement|
-| -------------- | ---------------- | --------------- |---------- |
-| Integration    | Apache Camel     | Red Hat Fuse   | Core of the Platform|
-| Business Rules | Drools           | Red Hat Decision Mgr |Used by iDAAS Dream, can be optional if no DREAM components implemented|
-| Data Streaming | Apache Kafka     | Red Hat A-MQ Streams |Requirement by platform for messaging |
-| Containers     | K8               | OpenShift            |End User defined, platform can be run stand alone or at scale|
+# Building and Running iDAAS
+iDAAS is a series of components so building it is a simple step, running it involves configuring several iDAAS components and running them together. Within each iDAAS component there is an implementation/running specific set of instructions. Since the platform leverages Maven the commands are very well published and known.
 
-It contains the following non Red Hat technologies:
+## Building
+To build you will need to go to the main directory after cloning, or pulling the respective repositories, and run the following command where the pom.xml file is located (or configure an IDE):
 
-| Capabilty Area | Technologies |
-| -------------- | ------------ |
-| RDBMS    | SQL Server, Postgres or MariaDB     |
-| Programming Language(s)     | Java 1.8 or higher (determined by software implementations. .NetCore 3 for APIs and UI Platforms|
+mvn clean build
+
+## Running
+To run any component run the following command from where the pom.xml file is located (or configure an IDE):
+
+mvn package
+
+It will create a jar with the version defined in the pom.xml file within the /target directory. from the /target directory you can run the component by running: java -jar <jarfilename.jar>
 
 # Practical Implementation: Partnering Organization
 In order to address the healthcare market needs Red Hat’s healthcare team needed to ensure they had a real world market focus to build out relevant market demonstrations and workshops for the platforms it was creating. To help achieve this Red Hat Healthcare created a fictitious healthcare company named Care Delivery Corp US, it’s acronym is CADUCEUS (the medical symbol). The intent of doing this is to have a healthcare enterprise that resonates within the healthcare market. 
