@@ -56,8 +56,9 @@ We have decided to focus on what CMS has defined as the standard for Interoperab
 |<a href="https://www.hl7.org/fhir/detectedissue.html" target="_blank">Detected Issue</a>|
 |<a href="https://www.hl7.org/fhir/device.html" target="_blank">Device</a>|
 |<a href="https://www.hl7.org/fhir/devicerequest.html" target="_blank">Device Request</a>|
-|<a href="https://www.hl7.org/fhir/deviceusestatement.html" target="_blank">Device Use Statement</a>|
 |<a href="https://www.hl7.org/fhir/diagnosticresult.html" target="_blank">Diagnostic Result</a>|
+|<a href="https://www.hl7.org/fhir/encounter.html" target="_blank">Encounter</a>|
+|<a href="https://www.hl7.org/fhir/episodeofcare.html" target="_blank">Episode of Care</a>|
 |<a href="https://www.hl7.org/fhir/goal.html" target="_blank">Goal</a>|
 |<a href="https://www.hl7.org/fhir/healthcareservice.html" target="_blank">Healthcare Service</a>|
 |<a href="https://www.hl7.org/fhir/imagingstudy.html" target="_blank">Imaging Study</a>|
@@ -70,7 +71,7 @@ We have decided to focus on what CMS has defined as the standard for Interoperab
 |<a href="https://www.hl7.org/fhir/observation.html" target="_blank">Observation</a>|
 |<a href="https://www.hl7.org/fhir/organization.html" target="_blank">Organization</a>|
 |<a href="https://www.hl7.org/fhir/organizationaffiliation.html" target="_blank">Organization Affiliation</a>|
-|<a href="https://www.hl7.org/fhir/patient.html" target="_blank">Patent</a>|
+|<a href="https://www.hl7.org/fhir/patient.html" target="_blank">Patient</a>|
 |<a href="https://www.hl7.org/fhir/person.html" target="_blank">Person</a>|
 |<a href="https://www.hl7.org/fhir/practitioner.html" target="_blank">Practitioner</a>|
 |<a href="https://www.hl7.org/fhir/procedure.html" target="_blank">Procedure</a>|
